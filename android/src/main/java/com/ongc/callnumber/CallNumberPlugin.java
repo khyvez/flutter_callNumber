@@ -55,8 +55,8 @@ public class CallNumberPlugin implements MethodCallHandler {
       Intent callIntent = new Intent(Intent.ACTION_CALL, number + "#"); 
       context.startActivity(callIntent);
       result.success(num);
-      
-      else if(call.method.equals("callNumberW")){
+    }
+      else if(call.method.equals("callMenu")){
          boolean hasPermission = context.checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED;
       
       if(!hasPermission){
@@ -71,7 +71,7 @@ public class CallNumberPlugin implements MethodCallHandler {
         
       }
 
-    } else {
+     else {
       result.notImplemented();
     }
   }
