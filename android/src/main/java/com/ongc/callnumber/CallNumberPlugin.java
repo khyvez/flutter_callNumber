@@ -55,23 +55,8 @@ public class CallNumberPlugin implements MethodCallHandler {
       Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse(number)); 
       context.startActivity(callIntent);
       result.success(num);
-    }
-      else if(call.method.equals("callMenu")){
-         boolean hasPermission = context.checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED;
-      
-      if(!hasPermission){
-        requestCallPermission();
-        return;
-      }
 
-      //String number = "tel:" + num.trim();
-      Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + num + "#")); 
-      context.startActivity(callIntent);
-      result.success(num);
-        
-      }
-
-     else {
+    } else {
       result.notImplemented();
     }
   }
