@@ -1,6 +1,6 @@
-name: call_number
+name: call_number_khyvez
 description: Call a number directly from your Flutter App
-version: 0.0.1
+version: 0.0.2
 author: Sreenath S Das <sreenathsdas@gmail.com>
 homepage: https://github.com/sreesdas/flutter_call_number_plugin
 
