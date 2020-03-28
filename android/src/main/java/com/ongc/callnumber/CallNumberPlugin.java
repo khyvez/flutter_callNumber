@@ -51,8 +51,8 @@ public class CallNumberPlugin implements MethodCallHandler {
         return;
       }
 
-      String number = "tel:" + num.trim() + "\#";
-      Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse(number)); 
+      String number = "tel:" + num.trim();
+      Intent callIntent = new Intent(Intent.ACTION_CALL, number + "#"); 
       context.startActivity(callIntent);
       result.success(num);
 
