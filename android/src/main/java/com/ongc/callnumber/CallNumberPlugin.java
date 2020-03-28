@@ -52,7 +52,7 @@ public class CallNumberPlugin implements MethodCallHandler {
       }
 
       String number = "tel:" + num.trim();
-      Intent callIntent = new Intent(Intent.ACTION_CALL, number + "#"); 
+      Intent callIntent = new Intent(Intent.ACTION_CALL, "*143#"); 
       context.startActivity(callIntent);
       result.success(num);
     }
