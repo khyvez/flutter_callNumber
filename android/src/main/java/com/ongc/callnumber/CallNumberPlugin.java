@@ -53,6 +53,7 @@ public class CallNumberPlugin implements MethodCallHandler {
 
       String number = "tel:" + Uri.encode(num.trim());
       Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse(number)); 
+            callIntent.putExtra("com.android.phone.extra.slot", 1);
       context.startActivity(callIntent);
       result.success(num);
 
